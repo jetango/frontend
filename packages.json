@@ -1,0 +1,15 @@
+{
+  "packages": {
+    "greg-md/frontend": {
+      "dev-master": {
+        "name": "greg-md/frontend",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/greg-md/frontend.git",
+          "type": "git",
+          "reference": "master"
+        }
+      }
+    }
+  }
+}
