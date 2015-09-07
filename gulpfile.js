@@ -92,6 +92,29 @@ gulp.task('build:clean', function (done) {
     del(settings.clean.build, done);
 });
 
+// Rerun the task when a file changes
+gulp.task('build:watch', function() {
+    settings.html.forEach(function(item) {
+        gulp.watch(item.src, ['build:html']);
+    });
+
+    settings.css.forEach(function(item) {
+        gulp.watch(item.src, ['build:css']);
+    });
+
+    settings.js.forEach(function(item) {
+        gulp.watch(item.src, ['build:js']);
+    });
+
+    settings.img.forEach(function(item) {
+        gulp.watch(item.src, ['build:img']);
+    });
+
+    settings.img.forEach(function(item) {
+        gulp.watch(item.src, ['build:libs']);
+    });
+});
+
 gulp.task('build', [
     'build:html',
     'build:css',
@@ -152,6 +175,25 @@ gulp.task('release:clean', function (done) {
     del(settings.clean.release, done);
 });
 
+// Rerun the task when a file changes
+gulp.task('release:watch', function() {
+    settings.css.forEach(function(item) {
+        gulp.watch(item.src, ['release:css']);
+    });
+
+    settings.js.forEach(function(item) {
+        gulp.watch(item.src, ['release:js']);
+    });
+
+    settings.img.forEach(function(item) {
+        gulp.watch(item.src, ['release:img']);
+    });
+
+    settings.img.forEach(function(item) {
+        gulp.watch(item.src, ['release:libs']);
+    });
+});
+
 gulp.task('release', [
     'release:css',
     'release:js',
@@ -167,25 +209,6 @@ gulp.task('webserver', function() {
     });
 });
 
-// Rerun the task when a file changes
-gulp.task('watch', function() {
-    settings.html.forEach(function(item) {
-        gulp.watch(item.src, ['build:html']);
-    });
-
-    settings.css.forEach(function(item) {
-        gulp.watch(item.src, ['build:css']);
-    });
-
-    settings.js.forEach(function(item) {
-        gulp.watch(item.src, ['build:js']);
-    });
-
-    settings.img.forEach(function(item) {
-        gulp.watch(item.src, ['build:img']);
-    });
-});
-
 gulp.task('openbrowser', ['webserver'], function() {
     opn('http://' + settings.server.host + ':' + settings.server.port + '/build');
 });
@@ -193,4 +216,4 @@ gulp.task('openbrowser', ['webserver'], function() {
 gulp.task('clean', ['build:clean', 'release:clean']);
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['build', 'webserver', 'watch', 'openbrowser']);
+gulp.task('default', ['build', 'webserver', 'build:watch', 'openbrowser']);
