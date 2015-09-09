@@ -313,7 +313,7 @@ input[type=checkbox]:after {
     opacity:0;
 }
 
-input[type=checkbox]:hover:after,
+html:not(.touch) input[type=checkbox]:hover:after,
 input[type=checkbox]:focus:after {
     opacity:0.3;
 }
@@ -647,12 +647,12 @@ input[type=file].button {
 }
 
 .reset,
-.reset:hover,
+html:not(.touch) .reset:hover,
 .reset:active,
 .reset.active,
 .reset:focus,
 input.reset,
-input.reset:hover,
+html:not(.touch) input.reset:hover,
 input.reset:active,
 input.reset.active,
 input.reset:focus {
@@ -699,7 +699,7 @@ input.reset:focus {
     width: 100%;
 }
 
-.group-elements .group-element-item:hover {
+html:not(.touch) .group-elements .group-element-item:hover {
     z-index: 1;
 }
 
@@ -838,9 +838,4 @@ button[disabled],
     color:#3a87ad;
     background-color:#d9edf7;
     border-color:#bce8f1;
-}
-
-.debug {
-    border-color:#ccc;
-    background:#eee;
 }
