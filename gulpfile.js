@@ -70,9 +70,9 @@ gulp.task('build:img', function() {
                 svgoPlugins: [{removeViewBox: false}],
                 use: [pngquant()]
             }).on('error', function(err) {
-                 util.log(util.colors.red('Imagemin error.'), err.message);
+                util.log(util.colors.red('Imagemin error.'), err.message);
 
-                 this.emit('end');
+                this.emit('end');
             }))
             .pipe(gulp.dest(item.build))
             .pipe(connect.reload());
@@ -153,9 +153,9 @@ gulp.task('release:img', function() {
                 svgoPlugins: [{removeViewBox: false}],
                 use: [pngquant()]
             }).on('error', function(err) {
-                 util.log(util.colors.red('Imagemin error.'), err.message);
+                util.log(util.colors.red('Imagemin error.'), err.message);
 
-                 this.emit('end');
+                this.emit('end');
             }))
             .pipe(gulp.dest(item.release))
             .pipe(connect.reload());
