@@ -20,15 +20,17 @@ The start is here.
 6. `build:clean`
 7. `build:watch`
 8. `build`
-### Release
-9. `release:css`
-10. `release:js`
-11. `release:img`
-12. `release:libs`
-13. `release:clean`
-14. `release:watch`
-15. `release`
 
+### Release
+1. `release:css`
+2. `release:js`
+3. `release:img`
+4. `release:libs`
+5. `release:clean`
+6. `release:watch`
+7. `release`
+
+# General
 16. `webserver`
 17. `openbrowser`
 18. `clean`
