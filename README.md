@@ -20,7 +20,6 @@ The start is here.
 6. `build:clean`
 7. `build:watch`
 8. `build`
-
 ### Release
 9. `release:css`
 10. `release:js`
