@@ -31,6 +31,6 @@ The start is here.
 7. `release`
 
 # General
-16. `webserver`
-17. `openbrowser`
-18. `clean`
+1. `webserver`
+2. `openbrowser`
+3. `clean`
