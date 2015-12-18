@@ -7,7 +7,7 @@
   "license": "MIT",
 
   "scripts": {
-    "postinstall": "tsd reinstall --so && tsd link && tsd rebundle",
+    "postinstall": "tsd reinstall --so && tsd link && tsd rebundle && gulp vendor",
     "reinstall": "rimraf node_modules && npm cache clean && npm install",
     "start": "gulp"
   },
