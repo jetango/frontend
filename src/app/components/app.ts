@@ -12,9 +12,9 @@ import {config} from 'app/config';
 @RouteConfig([
     {
         path: '/',
-        loader: asyncRoute(config.basePath + '/app/components/home/index', 'HomeCmp'),
+        loader: asyncRoute(config.basePath + '/app/components/home/index', 'HomeComponent'),
         as: 'Home'
     }
 ])
 
-export class AppCmp {}
+export class AppComponent {}

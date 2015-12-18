@@ -7,4 +7,4 @@ import {config} from 'app/config';
     directives: [ROUTER_DIRECTIVES]
 })
 
-export class HomeCmp {}
+export class HomeComponent {}
