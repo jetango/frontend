@@ -1,4 +1,4 @@
-import {Directive, ElementRef, EventEmitter} from 'angular2/angular2';
+import {Directive, ElementRef, EventEmitter} from 'angular2/core';
 
 @Directive({
     selector: '[date-time-picker]',

@@ -1,4 +1,4 @@
-import {Injectable} from 'angular2/angular2';
+import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
 import {http_build_query} from 'app/tools/http_build_query';
 import {config} from 'app/config';
