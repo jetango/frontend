@@ -39,8 +39,10 @@ The start is here.
 7. `gulp build.html` - Build html;
 8. `gulp build.vendor` - Build vendor.
 
-
 ### Server
-
 1. `gulp server` - Run all next tasks;
 2. `gulp server.start` - Start web server.
+
+### Watch
+1. `gulp watch` - Run all next tasks;
+2. `gulp watch.build` - Watch for build files changes.
