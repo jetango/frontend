@@ -1,26 +1,67 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 
 <head>
-    <title>frontend</title>
+    <title>Boilerplate for angular+ts+html+js+css apps</title>
 
     <meta charset="utf-8" />
 
-    <meta name="viewport" content="width=device-width, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link type="image/png" rel="icon" href="assets/img/favicon.png" />
 
-    <link type="image/png" rel="icon" href="img/favicon.png" />
+    <!-- css -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/eonasdan-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+
+    <!-- js -->
+    <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/moment/min/moment.min.js"></script>
+
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/eonasdan-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- angular -->
+    <script src="vendor/systemjs/system.src.js"></script>
+    <script src="vendor/angular2/angular2.js"></script>
+    <script src="vendor/angular2/router.js"></script>
+    <script src="vendor/angular2/http.js"></script>
+
+    <script>
+        System.config({
+            packages: {'app': {defaultExtension: 'js'}}
+        });
+
+        System.import('app/bootstrap');
+    </script>
 </head>
 
 <body>
-    <h1 class="center">Hello World!</h1>
 
-    <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+<app>
+    <div id="app-progress">Loading.</div>
+
+    <script>
+        var progressInterval = setInterval(function() {
+            var progress = document.getElementById('app-progress');
+
+            if (!progress) {
+                clearInterval(progressInterval);
+
+                return;
+            }
+
+            if (progress.textContent.length > 50) {
+                progress.textContent = 'Loading.';
+            } else {
+                progress.textContent += '.';
+            }
+        }, 100);
+    </script>
+</app>
+
 </body>
 
 </html>

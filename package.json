@@ -1,18 +1,52 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "boilerplate for html+js+css apps",
+  "description": "Boilerplate for angular+ts+html+js+css apps",
+  "repository": "https://github.com/greg-md/frontend",
+  "author": "Grigorii Duca <greg-md>",
+  "license": "MIT",
+
+  "scripts": {
+    "postinstall": "tsd reinstall --so && tsd link && tsd rebundle",
+    "reinstall": "rimraf node_modules && npm cache clean && npm install",
+    "start": "gulp"
+  },
+
   "devDependencies": {
-    "gulp": "^3.8.1",
-    "gulp-concat": "*",
-    "gulp-uglify": "*",
-    "gulp-imagemin": "*",
-    "gulp-sourcemaps": "*",
-    "gulp-util": "*",
-    "del": "*",
-    "gulp-connect": "*",
-    "opn": "*",
-    "gulp-minify-css": "*",
-    "imagemin-pngquant": "*"
+    "ts-node": "^0.5.4",
+    "tslint": "^3.1.1",
+    "typescript": "^1.7.3",
+    "tsd": "^0.6.5",
+
+    "tiny-lr": "^0.2.1",
+    "connect-livereload": "^0.5.4",
+    "express": "^4.13.3",
+    "open": "^0.0.5",
+
+    "del": "^2.1.0",
+    "rimraf": "^2.4.4",
+
+    "imagemin-pngquant": "^4.2.0",
+
+    "gulp": "^3.9.0",
+    "gulp-tslint": "^4.1.0",
+    "gulp-tslint-stylish": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.10.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-watch": "^4.3.5",
+
+    "run-sequence": "^1.1.5"
+  },
+
+  "dependencies": {
+    "angular2": "2.0.0-alpha.47",
+    "systemjs": "^0.19.6",
+
+    "jquery": "^2.1.4",
+    "bootstrap": "^3.3.6",
+    "eonasdan-bootstrap-datetimepicker": "^4.15.35"
   }
 }

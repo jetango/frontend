@@ -1,3 +1,4 @@
-/build
 /node_modules
-/settings.json
+/build
+/release
+/gulp/typings/tsd
