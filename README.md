@@ -12,7 +12,7 @@ The start is here.
 
 1. Configure dependencies in `package.json`
 2. Configure settings in `config.ts`
-3. Install vendor files `gulp vendor.install`
+3. Install vendor files `gulp vendor`
 
 # Angular2 configuration
 
