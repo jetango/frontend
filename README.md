@@ -20,9 +20,8 @@ The start is here.
 
 # Gulp tasks
 
-1. `gulp` - Run `build`, `server` and `watch` tasks;
+1. `gulp` - Run `build`, `server` and `watch.build` tasks;
 2. `gulp tslint` - Check typescript files for syntax errors;
-3. `gulp watch` - Watch for files changes.
 
 ### Vendor
 1. `gulp vendor` - Run all next tasks;
