@@ -42,6 +42,6 @@ The start is here.
 1. `gulp server` - Run all next tasks;
 2. `gulp server.start` - Start web server.
 
-### Watch
+### Watcher
 1. `gulp watch` - Run all next tasks;
 2. `gulp watch.build` - Watch for build files changes.
