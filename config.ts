@@ -16,6 +16,7 @@ export var config = {
 
 export var vendor = [
   {src: 'node_modules/systemjs/dist/**/*', dest: 'vendor/systemjs'},
+  {src: 'node_modules/rxjs/bundles/**/*', dest: 'vendor/rxjs'},
   {src: 'node_modules/angular2/bundles/**/*', dest: 'vendor/angular2'},
 
   {src: 'node_modules/jquery/dist/**/*', dest: 'vendor/jquery'},
