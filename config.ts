@@ -7,6 +7,12 @@ export var config = {
 
   appVendorPath: 'vendor',
 
+  template: {
+    build: {
+      basePath: '/build'
+    }
+  },
+
   server: {
     port: 9000,
     path: '/build',

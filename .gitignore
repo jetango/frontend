@@ -2,3 +2,4 @@
 /build
 /release
 /gulp/typings/tsd
+/src/vendor

@@ -1,5 +1,5 @@
 export var config = {
-    basePath: '/build',
+    basePath: '<%= basePath %>',
 
     useHashLocationStrategy: true,
 
