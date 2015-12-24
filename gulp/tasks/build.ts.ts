@@ -39,5 +39,7 @@ export = function task() {
         confTs.js
             .pipe(sourceMaps.write('maps'))
             .pipe(gulp.dest(join(config.buildPath, 'app')));
+
+        return confTs;
     };
 }

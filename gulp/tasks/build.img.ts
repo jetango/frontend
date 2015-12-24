@@ -8,10 +8,12 @@ var pngQuant = require('imagemin-pngquant');
 
 export = function task() {
     return () => {
-        gulp.src([
-            join(config.srcPath, config.appAssetsPath, '**/*.png'),
-            join(config.srcPath, config.appAssetsPath, '**/*.jpg'),
-            join(config.srcPath, config.appAssetsPath, '**/*.svg')
+        return gulp.src([
+            join(config.srcPath, '**/*.png'),
+            join(config.srcPath, '**/*.jpg'),
+            join(config.srcPath, '**/*.svg'),
+
+            '!' + join(config.srcPath, config.appVendorPath, '**/*')
         ])
         .pipe(plumber())
         .pipe(imageMin({
@@ -20,6 +22,6 @@ export = function task() {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngQuant()]
         }))
-        .pipe(gulp.dest(join(config.buildPath, config.appAssetsPath)));
+        .pipe(gulp.dest(config.buildPath));
     };
 }

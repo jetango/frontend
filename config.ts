@@ -29,4 +29,6 @@ export var vendor = [
   {src: 'node_modules/bootstrap/dist/**/*', dest: 'vendor/bootstrap'},
   {src: 'node_modules/eonasdan-bootstrap-datetimepicker/build/**/*', dest: 'vendor/eonasdan-bootstrap-datetimepicker'},
   {src: 'node_modules/moment/**/*', dest: 'vendor/moment'},
+
+  {src: 'node_modules/js-cookie/src/**/*', dest: 'vendor/js-cookie'},
 ];

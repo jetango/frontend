@@ -3,8 +3,8 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 import {config} from 'app/config';
 
 @Component({
-    templateUrl: config.basePath + '/app/views/home/index.html',
+    templateUrl: config.viewsPath + '/base/index.html',
     directives: [ROUTER_DIRECTIVES]
 })
 
-export class HomeComponent {}
+export class BaseComponent {}

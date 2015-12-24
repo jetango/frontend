@@ -5,7 +5,7 @@ import {config} from '../../config';
 
 export = function task() {
     return () => {
-        gulp.src([
+        return gulp.src([
                 join(config.srcPath, '**/*.htm'),
                 join(config.srcPath, '**/*.html')
             ])

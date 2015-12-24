@@ -6,12 +6,14 @@ import {config} from '../../config';
 
 export = function task() {
     return () => {
-        gulp.src([
-                join(config.srcPath, config.appAssetsPath, '**/*.js')
+        return gulp.src([
+                join(config.srcPath, '**/*.js'),
+
+                '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
             .pipe(sourceMaps.init())
             .pipe(sourceMaps.write('maps'))
-            .pipe(gulp.dest(join(config.buildPath, config.appAssetsPath)));
+            .pipe(gulp.dest(config.buildPath));
     };
 }

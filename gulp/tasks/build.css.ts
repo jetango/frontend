@@ -5,10 +5,12 @@ import {config} from '../../config';
 
 export = function task() {
     return () => {
-        gulp.src([
-                join(config.srcPath, config.appAssetsPath, '**/*.css')
+        return gulp.src([
+                join(config.srcPath, '**/*.css'),
+
+                '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
-            .pipe(gulp.dest(join(config.buildPath, config.appAssetsPath)));
+            .pipe(gulp.dest(config.buildPath));
     };
 }

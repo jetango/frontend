@@ -47,7 +47,7 @@ export class Api {
         }
     }
 
-    fetchResponse(observable: Observable, callable) {
+    fetchResponse(observable, callable) {
         return observable.map(res => res.json()).subscribe((res) => callable && callable(res));
     }
 }
