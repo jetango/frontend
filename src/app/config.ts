@@ -11,5 +11,7 @@ export var config = new function() {
 
     this.useHashLocationStrategy = true;
 
+    this.enableProductionMode = true;
+
     this.apiHost = 'http://127.0.0.1/api';
 }();
