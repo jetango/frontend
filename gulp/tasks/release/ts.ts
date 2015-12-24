@@ -5,6 +5,8 @@ import * as typescript from 'gulp-typescript';
 import {join} from 'path';
 import {config} from '../../../config';
 
+var uglify = require('gulp-uglify');
+
 var template = require('gulp-template');
 
 export = function task() {
@@ -23,6 +25,7 @@ export = function task() {
             })));
 
         allTs.js
+            .pipe(uglify())
             .pipe(sourceMaps.write('maps'))
             .pipe(gulp.dest(config.releasePath));
 
@@ -37,6 +40,7 @@ export = function task() {
             })));
 
         confTs.js
+            .pipe(uglify())
             .pipe(sourceMaps.write('maps'))
             .pipe(gulp.dest(join(config.releasePath, 'app')));
 
