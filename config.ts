@@ -10,6 +10,9 @@ export var config = {
   template: {
     build: {
       basePath: '/build'
+    },
+    release: {
+      basePath: '/release'
     }
   },
 
@@ -26,6 +29,7 @@ export var vendor = [
   {src: 'node_modules/angular2/bundles/**/*', dest: 'vendor/angular2'},
 
   {src: 'node_modules/jquery/dist/**/*', dest: 'vendor/jquery'},
+
   {src: 'node_modules/bootstrap/dist/**/*', dest: 'vendor/bootstrap'},
   {src: 'node_modules/eonasdan-bootstrap-datetimepicker/build/**/*', dest: 'vendor/eonasdan-bootstrap-datetimepicker'},
   {src: 'node_modules/moment/**/*', dest: 'vendor/moment'},

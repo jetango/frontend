@@ -3,7 +3,7 @@ import * as plumber from 'gulp-plumber';
 import * as sourceMaps from 'gulp-sourcemaps';
 import * as typescript from 'gulp-typescript';
 import {join} from 'path';
-import {config} from '../../config';
+import {config} from '../../../config';
 
 var template = require('gulp-template');
 
@@ -24,12 +24,12 @@ export = function task() {
 
         allTs.js
             .pipe(sourceMaps.write('maps'))
-            .pipe(gulp.dest(config.buildPath));
+            .pipe(gulp.dest(config.releasePath));
 
         let confTs = gulp.src([
                 join(config.srcPath, 'app/config.ts'),
             ])
-            .pipe(template(config.template.build))
+            .pipe(template(config.template.release))
             .pipe(plumber())
             .pipe(sourceMaps.init())
             .pipe(typescript(typescript.createProject(join('tsconfig.json'), {
@@ -38,7 +38,7 @@ export = function task() {
 
         confTs.js
             .pipe(sourceMaps.write('maps'))
-            .pipe(gulp.dest(join(config.buildPath, 'app')));
+            .pipe(gulp.dest(join(config.releasePath, 'app')));
 
         return confTs;
     };

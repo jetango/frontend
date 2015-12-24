@@ -20,7 +20,9 @@ The start is here.
 
 # Gulp tasks
 
-1. `gulp` - Run `build`, `server` and `watch.build` tasks;
+1. `gulp` - Run `dev` task;
+2. `gulp dev` - Run `build`, `server` and `watch.build` tasks;
+2. `gulp prod` - Run `release` and `watch.release` tasks;
 2. `gulp tslint` - Check typescript files for syntax errors;
 
 ### Vendor
@@ -30,18 +32,28 @@ The start is here.
 
 ### Build
 1. `gulp build` - Run `tslint` and all next tasks;
-2. `gulp build.clean` - Delete build folder;
-3. `gulp build.ts` - Build typescript to javascript;
-4. `gulp build.js` - Build javascript;
-5. `gulp build.img` - Build images;
-6. `gulp build.css` - Build css;
-7. `gulp build.html` - Build html;
-8. `gulp build.vendor` - Build vendor.
+2. `gulp build:clean` - Delete build folder;
+3. `gulp build:ts` - Build typescript to javascript;
+4. `gulp build:js` - Build javascript;
+5. `gulp build:img` - Build images;
+6. `gulp build:css` - Build css;
+7. `gulp build:html` - Build html;
+8. `gulp build:vendor` - Build vendor.
+
+### Release
+1. `gulp release` - Run `tslint` and all next tasks;
+2. `gulp release:clean` - Delete release folder;
+3. `gulp release:ts` - Release typescript to javascript;
+4. `gulp release:js` - Release javascript;
+5. `gulp release:img` - Release images;
+6. `gulp release:css` - Release css;
+7. `gulp release:html` - Release html;
+8. `gulp release:vendor` - Release vendor.
 
 ### Server
 1. `gulp server` - Run all next tasks;
 2. `gulp server.start` - Start web server.
 
 ### Watcher
-1. `gulp watch` - Run all next tasks;
 2. `gulp watch.build` - Watch for build files changes.
+2. `gulp watch.release` - Watch for release files changes.

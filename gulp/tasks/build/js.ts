@@ -2,7 +2,7 @@ import * as gulp from 'gulp';
 import * as plumber from 'gulp-plumber';
 import * as sourceMaps from 'gulp-sourcemaps';
 import {join} from 'path';
-import {config} from '../../config';
+import {config} from '../../../config';
 
 export = function task() {
     return () => {
