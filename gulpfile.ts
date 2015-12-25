@@ -42,11 +42,11 @@ gulp.task('server', done => runSequence(
     done
 ));
 /*
-gulp.task('watch', done => runSequence(
-    'watch.build',
-    done
-));
-*/
+ gulp.task('watch', done => runSequence(
+ 'watch.build',
+ done
+ ));
+ */
 gulp.task('dev', done => runSequence(
     'build',
     'server',

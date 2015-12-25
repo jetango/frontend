@@ -39,6 +39,12 @@ export var vendor = [
 
 export var jsMin = [
   'vendor/js-cookie/js.cookie.js',
+  'vendor/angular2/angular2-polyfills.js',
+  'vendor/systemjs/system.src.js',
+  'vendor/rxjs/Rx.js',
+  'vendor/angular2/angular2.dev.js',
+  'vendor/angular2/router.dev.js',
+  'vendor/angular2/http.dev.js',
 ];
 
 export var cssMin = [
