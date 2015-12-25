@@ -36,3 +36,15 @@ export var vendor = [
 
   {src: 'node_modules/js-cookie/src/**/*', dest: 'vendor/js-cookie'},
 ];
+
+export var jsMin = [
+  'vendor/js-cookie/js.cookie.js',
+];
+
+export var cssMin = [
+
+];
+
+export var htmlMin = [
+
+];

@@ -3,7 +3,7 @@ import * as plumber from 'gulp-plumber';
 import {join} from 'path';
 import {config} from '../../../config';
 
-var htmlmin = require('gulp-htmlmin');
+var minifyHtml = require('gulp-htmlmin');
 
 export = function task() {
     return () => {
@@ -14,7 +14,7 @@ export = function task() {
                 '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
-            .pipe(htmlmin({collapseWhitespace: true}))
+            .pipe(minifyHtml({collapseWhitespace: true}))
             .pipe(gulp.dest(config.releasePath));
     };
 }

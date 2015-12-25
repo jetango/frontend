@@ -31,6 +31,9 @@ gulp.task('release', done => runSequence(
     'release:css',
     'release:html',
     'release:vendor',
+    'release:js.min',
+    'release:css.min',
+    'release:html.min',
     done
 ));
 
