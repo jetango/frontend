@@ -12,6 +12,7 @@ export = function task() {
             join(config.srcPath, '**/*.png'),
             join(config.srcPath, '**/*.jpg'),
             join(config.srcPath, '**/*.svg'),
+
             '!' + join(config.srcPath, config.appVendorPath, '**/*')
         ])
         .pipe(plumber())

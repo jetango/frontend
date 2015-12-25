@@ -9,7 +9,9 @@ export = function task() {
     return () => {
         return gulp.src([
                 join(config.srcPath, '**/*.htm'),
-                join(config.srcPath, '**/*.html')
+                join(config.srcPath, '**/*.html'),
+
+                '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
             .pipe(htmlmin({collapseWhitespace: true}))

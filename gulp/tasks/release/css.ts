@@ -11,7 +11,7 @@ export = function task() {
         return gulp.src([
                 join(config.srcPath, '**/*.css'),
 
-                //'!' + join(config.srcPath, config.appVendorPath, '**/*')
+                '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
             .pipe(sourceMaps.init())

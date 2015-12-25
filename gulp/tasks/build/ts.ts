@@ -14,7 +14,9 @@ export = function task() {
 
                 '!' + join(config.srcPath, 'app/config.ts'),
                 '!' + join(config.srcPath, '**/*_spec.ts'),
-                '!' + join(config.srcPath, '**/*.d.ts')
+                '!' + join(config.srcPath, '**/*.d.ts'),
+
+                '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
             .pipe(sourceMaps.init())
