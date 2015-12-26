@@ -1,7 +1,7 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {provide, enableProdMode} from 'angular2/core';
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {ROUTER_PROVIDERS, APP_BASE_HREF, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 import {Api} from 'app/resources/api';
 import {Auth} from 'app/resources/auth';
 import {AppComponent} from 'app/components/app';
@@ -14,7 +14,6 @@ if (config.enableProductionMode) {
 let providers = [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: location.pathname }),
   Api,
   Auth
 ];

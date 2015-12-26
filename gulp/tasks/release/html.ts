@@ -7,6 +7,8 @@ var minifyHtml = require('gulp-htmlmin');
 
 var minifyHTML = require('gulp-minify-html');
 
+var template = require('gulp-template');
+
 export = function task() {
     return () => {
         return gulp.src([
@@ -16,6 +18,7 @@ export = function task() {
                 '!' + join(config.srcPath, config.appVendorPath, '**/*')
             ])
             .pipe(plumber())
+            .pipe(template(config.template.release))
             /*
             .pipe(minifyHTML({
                 empty: true,

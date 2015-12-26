@@ -34,8 +34,8 @@ export = function task() {
         let confTs = gulp.src([
                 join(config.srcPath, 'app/config.ts'),
             ])
-            .pipe(template(config.template.release))
             .pipe(plumber())
+            .pipe(template(config.template.release))
             .pipe(sourceMaps.init())
             .pipe(typescript(typescript.createProject(join('tsconfig.json'), {
                 typescript: require('typescript')
