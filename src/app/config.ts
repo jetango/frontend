@@ -1,5 +1,7 @@
 let BASE_PATH = '<%= basePath %>';
 
+let ROUTE_HASH = parseInt('<%= basePath %>');
+
 export var config = new function() {
     this.basePath = BASE_PATH;
 
@@ -9,7 +11,7 @@ export var config = new function() {
 
     this.viewsPath = this.appPath + '/views';
 
-    this.useHashLocationStrategy = true;
+    this.useHashLocationStrategy = ROUTE_HASH;
 
     this.enableProductionMode = true;
 
