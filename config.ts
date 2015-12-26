@@ -1,7 +1,7 @@
 export var config = {
   srcPath: 'src',
   buildPath: 'build',
-  releasePath: 'release',
+  releasePath: 'public',
 
   appAssetsPath: 'assets',
 
@@ -12,7 +12,7 @@ export var config = {
       basePath: '/build'
     },
     release: {
-      basePath: '/release'
+      basePath: '/'
     }
   },
 
