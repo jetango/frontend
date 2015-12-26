@@ -19,6 +19,7 @@ gulp.task('build', done => runSequence(
     'build:css',
     'build:html',
     'build:vendor',
+    'build:resources',
     done
 ));
 
@@ -31,6 +32,7 @@ gulp.task('release', done => runSequence(
     'release:css',
     'release:html',
     'release:vendor',
+    'release:resources',
     'release:js.min',
     'release:css.min',
     'release:html.min',

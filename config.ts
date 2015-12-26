@@ -25,6 +25,10 @@ export var config = {
   }
 };
 
+export var resources = [
+  'nginx*.conf',
+];
+
 export var vendor = [
   {src: 'node_modules/systemjs/dist/**/*', dest: 'vendor/systemjs'},
   {src: 'node_modules/rxjs/bundles/**/*', dest: 'vendor/rxjs'},
