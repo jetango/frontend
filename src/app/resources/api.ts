@@ -10,44 +10,40 @@ export class Api {
 
     constructor(private http: Http) {}
 
-    get(method, params, callable: Function) {
-        return this.call('get', method, params, callable);
+    get(method, params) {
+        return this.call('get', method, params);
     }
 
-    post(method, params, callable: Function) {
-        return this.call('post', method, params, callable);
+    post(method, params) {
+        return this.call('post', method, params);
     }
 
-    put(method, params, callable: Function) {
-        return this.call('put', method, params, callable);
+    put(method, params) {
+        return this.call('put', method, params);
     }
 
-    del(method, params, callable: Function) {
-        return this.call('delete', method, params, callable);
+    del(method, params) {
+        return this.call('delete', method, params);
     }
 
     getResource(method) {
         return this.host + method;
     }
 
-    call(type, method, params, callable) {
+    call(type, method, params) {
         switch(type) {
             case 'get':
             case 'delete':
             case 'head':
-                return this.fetchResponse(this.http[type](this.getResource(method)), callable);
+                return this.http[type](this.getResource(method));
             case 'post':
             case 'put':
             case 'patch':
-                return this.fetchResponse(this.http[type](this.getResource(method), http_build_query(params), {
+                return this.http[type](this.getResource(method), http_build_query(params), {
                     headers: {
                         'Content-Type': ['application/x-www-form-urlencoded; charset=UTF-8']
                     }
-                }), callable);
+                });
         }
-    }
-
-    fetchResponse(observable, callable) {
-        return observable.map(res => res.json()).subscribe((res) => callable && callable(res));
     }
 }
