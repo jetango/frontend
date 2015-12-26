@@ -12,7 +12,7 @@ export var config = {
       basePath: '/build'
     },
     release: {
-      basePath: '/'
+      basePath: ''
     }
   },
 
