@@ -22,7 +22,7 @@ export class AppRouter extends RouterOutlet {
 
     // Check acl access before it will activate the component.
     activate(nextInstruction) {
-        console.log('activate', nextInstruction);
+        //console.log('activate', nextInstruction);
 
         if (!this.aclExec(nextInstruction)) {
             return;
@@ -37,37 +37,13 @@ export class AppRouter extends RouterOutlet {
         // 2. Click a link to the same page. Will call the reuse function.
         // 3. Logout. The _auth object is gone. :))
         if (!this._auth) {
-            console.log('lol, where is the _auth object?', instruction, this);
+            //console.log('lol, where is the _auth object?', instruction, this);
 
             // Try to redirect somewhere and the _auth object will appear back. :))
             this._parentRouter.navigate(['Home']);
 
             return;
         }
-
-        // Bug: Temporary bugfix by url because RouteData is always empty
-        if (instruction.urlPath == '' && this._auth.isGuest) {
-            if (navigate) {
-                // Temporary use direct routes because RouteData is always empty
-                this._parentRouter.navigate(['Login']);
-            } else {
-                super.activate(instruction);
-            }
-
-            return false;
-        }
-
-        if (instruction.urlPath == 'login' && this._auth.isMember) {
-            if (navigate) {
-                // Temporary use direct routes because RouteData is always empty
-                this._parentRouter.navigate(['Home']);
-            } else {
-                super.activate(instruction);
-            }
-
-            return false;
-        }
-        // End temporary bugfix
 
         if (instruction.routeData.get('memberOnly') && this._auth.isGuest) {
             if (navigate) {
@@ -96,11 +72,11 @@ export class AppRouter extends RouterOutlet {
 
     reuse(nextInstruction) {
         // Bug: Why when i want to go back in the browser, it calls the reuse function twice?
-        console.log('reuse', nextInstruction, this._componentRef);
+        //console.log('reuse', nextInstruction, this._componentRef);
 
         // Bug: Fix for the browser back button. The component reference is gone somewhere.
         if (!this._componentRef) {
-            console.log('aclExec');
+            //console.log('aclExec');
 
             if (this.aclExec(nextInstruction, false)) {
                 super.activate(nextInstruction);
