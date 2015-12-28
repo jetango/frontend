@@ -1,5 +1,5 @@
 /node_modules
 /build
-/release
+/public
 /gulp/typings/tsd
 /src/vendor

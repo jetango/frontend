@@ -39,6 +39,7 @@ The start is here.
 6. `gulp build:css` - Build css;
 7. `gulp build:html` - Build html;
 8. `gulp build:vendor` - Build vendor.
+8. `gulp build:resources` - Build resources.
 
 ### Release
 1. `gulp release` - Run `tslint` and all next tasks;
@@ -49,6 +50,10 @@ The start is here.
 6. `gulp release:css` - Release css;
 7. `gulp release:html` - Release html;
 8. `gulp release:vendor` - Release vendor.
+8. `gulp release:resources` - Release resources.
+8. `gulp release:js.min` - Release and uglify custom js resources.
+8. `gulp release:css.min` - Release and minify custom css resources.
+8. `gulp release:html.min` - Release and minify custom html resources.
 
 ### Server
 1. `gulp server` - Run all next tasks;
