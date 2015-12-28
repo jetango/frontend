@@ -1,6 +1,6 @@
 let BASE_PATH = '<%= basePath %>';
 
-let ROUTE_HASH = parseInt('<%= basePath %>');
+let ROUTE_HASH = parseInt('<%= routeHash %>');
 
 export var config = new function() {
     this.basePath = BASE_PATH;
