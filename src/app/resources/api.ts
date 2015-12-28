@@ -10,19 +10,19 @@ export class Api {
 
     constructor(private http: Http) {}
 
-    get(method, params) {
+    get(method, params = {}) {
         return this.call('get', method, params);
     }
 
-    post(method, params) {
+    post(method, params = {}) {
         return this.call('post', method, params);
     }
 
-    put(method, params) {
+    put(method, params = {}) {
         return this.call('put', method, params);
     }
 
-    del(method, params) {
+    del(method, params = {}) {
         return this.call('delete', method, params);
     }
 
@@ -30,7 +30,7 @@ export class Api {
         return this.host + method;
     }
 
-    call(type, method, params) {
+    call(type, method, params = {}) {
         switch(type) {
             case 'get':
             case 'delete':
