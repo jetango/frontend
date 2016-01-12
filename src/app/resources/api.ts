@@ -35,7 +35,7 @@ export class Api {
             case 'get':
             case 'delete':
             case 'head':
-                return this.http[type](this.getResource(method));
+                return this.http[type](this.getResource(method) + (params ? '?' + params : ''));
             case 'post':
             case 'put':
             case 'patch':
