@@ -27,7 +27,7 @@ export = function task() {
             })));
 
         allTs.js
-            .pipe(uglify())
+            //.pipe(uglify())
             .pipe(sourceMaps.write('maps'))
             .pipe(gulp.dest(config.releasePath));
 
