@@ -10,11 +10,11 @@ export var config = {
   template: {
     build: {
       basePath: '/build',
-      routeHash: true,
+      routeHash: 1,
     },
     release: {
       basePath: '',
-      routeHash: false,
+      routeHash: 0,
     }
   },
 
