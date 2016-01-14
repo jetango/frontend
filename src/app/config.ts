@@ -13,7 +13,7 @@ export var config = new function() {
 
     this.useHashLocationStrategy = ROUTE_HASH;
 
-    this.enableProductionMode = true;
+    this.enableProductionMode = false;
 
     this.apiHost = 'http://127.0.0.1/api';
 }();
