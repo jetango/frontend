@@ -15,5 +15,5 @@ export var config = new function() {
 
     this.enableProductionMode = false;
 
-    this.apiHost = 'http://127.0.0.1/api';
+    this.apiHost = '//127.0.0.1/api';
 }();
